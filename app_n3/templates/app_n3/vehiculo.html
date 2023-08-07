@@ -1,0 +1,43 @@
+{% extends 'app_n3/base.html' %}
+{% load static %}
+
+
+{% block titulo %}
+    Vehiculos
+{% endblock titulo %}
+    
+{% block cabecera %}
+  Vehiculos disponibles
+{% endblock cabecera %}
+
+{% block content %}        
+<table class="table">
+    <thead>
+        <tr>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Año</th>
+            <th>Color</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for Vehiculo in vehiculos  %}
+    <tr>
+        <td>{{ Vehiculo.marca }} </td>
+        <td>{{ Vehiculo.modelo }}</td>
+        <td>{{ Vehiculo.anio }}</td>
+        <td>{{Vehiculo.color}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>  
+{% endblock content %}
+
+
+{% block main_page %}
+    Los valores de los vehiculos son proporcionados directamente por los vendedores.
+{% endblock main_page %}
+    
+
+
+

@@ -1,0 +1,44 @@
+{% extends 'app_n3/base.html' %}
+{% load static %}
+
+
+{% block titulo %}
+    Sucursales
+{% endblock titulo %}
+
+{% block cabecera %}
+    Nuestros locales
+{% endblock cabecera %}
+
+{% block content %} 
+<table class="table">
+    <thead>
+        <tr>
+            <th>Localidad</th>
+            <th>Calle</th>
+            <th>Numeración</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for Sucursal in sucursales %}
+        <tr>
+            <td>{{ Sucursal.localidad }} </td>
+            <td>{{ Sucursal.calle }}</td>
+            <td>{{ Sucursal.numeracion }}</td>
+        </tr>
+    {% endfor %}
+    
+    </tbody>
+</table>
+{% endblock content %} 
+
+
+{% block main_page %}
+    ¡Proximamente, sucursal Caballito!
+{% endblock main_page %}
+    
+
+
+
+
+

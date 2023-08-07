@@ -1,0 +1,29 @@
+{% extends 'app_n3/base.html' %}
+{% load static %}
+
+
+{% block titulo %}
+    Buscar
+{% endblock titulo %}
+    
+{% block cabecera %}
+    ¿Que estas buscando?
+{% endblock cabecera %}
+
+
+{% block content %} 
+</head>
+<body>
+    <form action="/app_n3/buscador2" method="GET">
+       {% csrf_token %}   
+       <input type="text" name="search" id="search">
+       <input type="submit" value="Buscar">
+    </form>
+</body>
+{% endblock content %} 
+
+
+{% block main_page %}
+    Suerte en tu busqueda
+{% endblock main_page %}
+    

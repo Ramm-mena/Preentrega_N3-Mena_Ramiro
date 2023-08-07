@@ -1,0 +1,34 @@
+{% extends 'app_n3/base.html' %}
+{% load static %}
+
+
+{% block titulo %}
+    Vintage's Club
+{% endblock titulo %}
+    
+{% block cabecera %}
+  ¡Hacete Miembro de nuestra comunida!
+{% endblock cabecera %}
+
+{% block content %}        
+    <title>Vintage Club</title>
+    
+</head>
+<body>
+    <h2>¡Unite para recibir lo ultimo sobre ingresos al local y para enterarte de futuras reuniones!</h2>
+    <form action="" method="POST">
+        {% csrf_token %} 
+        <table>
+            {{ form.as_table }}
+        </table>
+        <input type="submit" value="Enviar">
+    </form>
+{% endblock content %}
+
+
+{% block main_page %}
+Te esperamos
+{% endblock main_page %}
+        
+    
+    

@@ -1,0 +1,41 @@
+{% extends 'app_n3/base.html' %}
+{% load static %}
+
+
+{% block titulo %}
+    Nuestro Crew
+{% endblock titulo %}
+    
+{% block cabecera %}
+    Nuestro Crew
+{% endblock cabecera %}
+
+
+{% block content %}    
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Puesto</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for Empleado in empleados  %}
+        <tr>
+            <td>{{ Empleado.nombre }} </td>
+            <td>{{ Empleado.apellido }}</td>
+            <td>{{ Empleado.puesto }}</td>
+            <td>{{Empleado.Email}}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock content %}
+
+
+{% block main_page %}
+    Cualquier consulta a cualquiera de nuestros miembros, hacerlo mediante su correo individual.
+{% endblock main_page %}
+    

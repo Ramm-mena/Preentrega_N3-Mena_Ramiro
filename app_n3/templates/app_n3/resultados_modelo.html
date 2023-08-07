@@ -1,0 +1,35 @@
+{% extends 'app_n3/base.html' %}
+{% load static %}
+
+{% block titulo %}
+Busqueda de autos 
+{% endblock titulo %}
+    
+{% block content %}
+
+    <table class="table">
+        Autos {{modelo}}
+        <thead>
+            <tr>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Año</th>
+                <th>Color</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for Vehiculo in vehiculos  %}
+        <tr>
+            <td>{{ Vehiculo.marca }} </td>
+            <td>{{ Vehiculo.modelo }}</td>
+            <td>{{ Vehiculo.anio }}</td>
+            <td>{{Vehiculo.color}}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock content %}
+
+{% block main_page %}
+    ¡Esperamos que haya sido de utilidad!
+{% endblock main_page %}
